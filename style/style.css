@@ -1,0 +1,568 @@
+body {
+	margin: 0;
+	font-family: 'Kalam', cursive;
+}
+
+section {
+	height: 100vh;
+	min-height: 675px;
+	background-size: cover;
+	background-position: center;
+	padding: 10vh 0 0;
+}
+
+#intro {
+	background-image: url("../images/IntroBack1.jpg");
+}
+
+#about {
+	background-image: url("../images/AboutBack1.jpg");
+}
+
+#skills {
+	background-image: url("../images/SkillsBack1.jpg");
+}
+
+#projects {
+	background-image: url("../images/ProjectsBack1.jpg");
+}
+
+#contact {
+	background-image: url("../images/ContactBack1.jpg");
+}
+
+.item {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/************nav-bar***********/
+
+nav {
+	height: 10vh;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	background-color: rgba(163, 163, 163, .5);
+	display: flex;
+	justify-content: space-evenly;
+}
+
+nav div {
+	margin: auto;
+	border-radius: 100%;
+	height: 5vh;
+	width: 5vh;
+	background-color: rgba(255, 255, 255, .65);
+	transition: background-color 1s;
+}
+
+nav div:not(.selected):hover {
+	background-color: rgba(130, 130, 130, .65);
+}
+
+nav div svg {
+	display: none;
+}
+
+nav div svg g {
+	transition: stroke .5s;
+}
+
+nav .selected {
+	height: 7vh;
+	width: 7vh;
+	background-color: rgba(0, 0, 0, .65);
+}
+
+nav .selected svg g {
+	stroke: #fff;
+	stroke-width: 1.5px;
+}
+
+/*********** intro *********/
+
+#intro .name {
+	background-image: url("../images/IntroBack2.png");
+	width: 100vw;
+	height: 100vw;
+}
+
+#intro .name svg {
+	position: relative;
+	top: 9%;
+	left: 10%;
+}
+
+#intro .title {
+	background-image: url("../images/IntroBack3.png");
+	width: 100vw;
+	height: 30vw;
+}
+
+#intro .title svg {
+	position: relative;
+	top: 16%;
+	left: 18%;
+}
+
+/**************about************/
+
+#about .title {
+	background-image: url("../images/AboutBack2.png");
+	width: 60vw;
+	height: 40vw;
+	margin: 0 auto;
+}
+
+#about .title svg {
+	position: relative;
+	top: 15%;
+	left: 18%;
+}
+
+#about .description {
+	background-image: url("../images/AboutBack3.png");
+	background-size: 100% 100%;
+	width: 100vw;
+	height: 100vw;
+}
+
+#about .description div {
+	position: relative;
+	top: 21%;
+	left: 10%;
+	width: 80%;
+	font-size: 5vw;
+	text-align: center;
+}
+
+/***********skills***************/
+
+#skills .title {
+	background-image: url("../images/SkillsBack2.png");
+	width: 60vw;
+	height: 40vw;
+	margin: 0 auto;
+}
+
+#skills .title svg {
+	position: relative;
+	top: 16%;
+	left: 16%;
+}
+
+#skills .skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#skills .skills .skill {
+	background-image: url("../images/SkillsBack3.png");
+	background-size: 100% 100%;
+	width: 33vw;
+	height: 20vh;
+	text-align: center;
+}
+
+#skills .skills .skill img {
+	width: 60%;
+	margin-top: 12%;
+}
+
+#skills .skills .skill h3 {
+	font-size: 20px;
+	margin: 0;
+}
+
+/**************projects************/
+
+#projects .title {
+	background-image: url("../images/ProjectsBack2.png");
+	width: 60vw;
+	height: 30vw;
+	margin: 0 auto;
+}
+
+#projects .title svg {
+	position: relative;
+	top: 1%;
+	left: 8%;
+}
+
+#projects .projects {
+	height: 70vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+#projects .projects a {
+	font-size: 4vw;
+	background-color: rgb(51, 51, 51);
+	color: rgb(255, 255, 255);
+	width: 60vw;
+	text-align: center;
+	text-decoration: none;
+	padding: 20px 0;
+	border-radius: 10%;
+}
+
+/*********contact*********/
+
+#contact .title {
+	background-image: url("../images/ContactBack2.png");
+	width: 60vw;
+	height: 30vw;
+	margin: 0 auto;
+}
+
+#contact .title svg {
+	position: relative;
+	top: 7%;
+	left: 10%;
+}
+
+#contact .contacts {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#contact .contacts .contact {
+	background-image: url("../images/ContactBack3.png");
+	background-size: 100% 100%;
+	width: 50vw;
+	height: 25vh;
+}
+
+#contact .contacts .contact a img {
+	width: 33vw;
+	position: relative;
+	top: 18%;
+	left: 14%;
+}
+
+/*************media queries***********/
+
+@media only screen and (min-width: 600px) {
+	/* intro */
+	#intro .name {
+		width: 600px;
+		height: 400px;
+		margin: 0 auto;
+	}
+
+	#intro .title {
+		width: 600px;
+		height: 260px;
+		margin: 0 auto;
+	}
+
+	/* about */
+	#about .title {
+		width: 400px;
+		height: 300px;
+	}
+
+	#about .description {
+		width: 600px;
+		height: 400px;
+		margin: 0 auto;
+	}
+
+	#about .description div {
+		font-size: 25px;
+	}
+
+	/* skills */
+	#skills .title {
+		width: 350px;
+		height: 170px;
+	}
+
+	#skills .skills .skill {
+		width: 170px;
+		height: 240px;
+	}
+
+	/*projects */
+	#projects .title {
+		width: 400px;
+		height: 200px;
+	}
+
+	#projects .projects a {
+		width: 500px;
+		font-size: 30px;
+	}
+
+	/* contact */
+	#contact .title {
+		width: 300px;
+		height: 200px;
+	}
+
+	#contact .contacts .contact {
+		width: 300px;
+		height: 300px;
+	}
+
+	#contact .contacts .contact a img {
+		width: 200px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/*intro*/
+	#intro .name {
+		margin: 100px auto;
+	}
+
+	/*about*/
+	#about .title {
+		margin: 0 auto;
+		width: 400px;
+		height: 300px;
+	}
+
+	#about .description {
+		width: 768px;
+		height: 600px;
+	}
+
+	#about .description div {
+		font-size: 34px;
+	}
+
+	/*skills*/
+	#skills .title {
+		width: 350px;
+		height: 150px;
+	}
+
+	#skills .skills .skill {
+		height: 250px;
+		font-size: 12px;
+	}
+
+	#skills .skills .skill img {
+		margin-top: 50px;
+	}
+
+	#skills .skills .skill h3 {
+		margin-top: 10px;
+	}
+
+	/*contact*/
+	#contact .title {
+		width: 400px;
+		height: 200px;
+	}
+
+	#contact .contacts .contact {
+		margin: 30px 0;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	/*nav-bar*/
+	nav {
+		height: 100px;
+	}
+
+	nav div {
+		border-radius: 20%;
+		height: 80px;
+		width: 175px;
+	}
+
+	nav div svg {
+		display: block;
+	}
+
+	nav .selected {
+		height: 80px;
+		width: 175px;
+	}
+
+	/*intro*/
+	#intro .name {
+		margin: 0 auto;
+		width: 800px;
+		height: 600px;
+	}
+
+	#intro .title {
+		width: 800px;
+		margin: 100px auto;
+	}
+
+	/*skills*/
+	#skills .title {
+		margin: 100px auto;
+	}
+
+	/*projects*/
+	#projects .projects a {
+		width: 400px;
+	}
+
+	/*contact*/
+	#contact .title {
+		margin: 50px auto;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	/* nav-bar */
+	nav {
+		height: 60px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	nav div, nav .selected {
+		height: 45px;
+		width: 105px;
+		margin: 0 30px;
+	}
+
+	/* intro */
+	#intro .name {
+		width: 620px;
+		height: 420px;
+	}
+
+	#intro .title {
+		width: 695px;
+		height: 170px;
+		margin: 0 auto;
+	}
+
+	/* about */
+	#about .title {
+		width: 360px;
+		height: 215px;
+		margin: 0 auto;
+	}
+
+	#about .description {
+		width: 890px;
+		height: 430px;
+		margin: -70px 0;
+	}
+
+	#about .description div {
+		left: 12%;
+		font-size: 31px;
+		text-align: left;
+	}
+
+	/* skills */
+	#skills .title {
+		width: 275px;
+		height: 145px;
+		margin: 0 auto;
+	}
+
+	#skills .skills {
+		padding: 0 50px;
+	}
+
+	#skills .skills .skill {
+		width: 185px;
+		height: 230px;
+	}
+
+	#skills .skills .skill img {
+		margin-top: 35px;
+	}
+
+	/* projects */
+	#projects .title {
+		width: 375px;
+		height: 160px;
+	}
+
+	#projects .projects a {
+		width: 305px;
+		margin: 0 20px;
+	}
+
+	/* contact */
+	#contact .title {
+		width: 435px;
+		height: 230px;
+		margin: 0 auto;
+	}
+}
+
+/********** animations *********/
+
+@keyframes navbar {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+section {
+	animation-name: section;
+	animation-duration: 1.5s;
+}
+
+@keyframes section {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+nav {
+	animation-name: navbar;
+	animation-duration: 1s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+}
+
+@keyframes gabe {
+	from {
+		stroke-dasharray: 85;
+		stroke-dashoffset: 85;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+#intro .name svg g {
+	animation-name: gabe;
+	animation-delay: 2s;
+	animation-duration: 3s;
+	animation-fill-mode: both;
+}
+
+@keyframes dev {
+	from {
+		stroke-dasharray: 65;
+		stroke-dashoffset: 65;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+#intro .title svg g {
+	animation-name: dev;
+	animation-delay: 3s;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
